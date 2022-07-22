@@ -1,0 +1,4 @@
+*_test.go
+*.md
+*.out
+docker-compose.yaml

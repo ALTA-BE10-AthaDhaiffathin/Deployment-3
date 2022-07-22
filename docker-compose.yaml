@@ -1,0 +1,18 @@
+services:
+  be10app:
+    depends_on:
+      - mysqlData
+    image: jerry8287/be10play
+    links:
+      - "mysqlData"
+    environment:
+      SECRET: "R4h@s1A!"
+      SERVERPORT: 8000
+      Name: "echorm"
+      Address: "echorm.c1nrn31lr6qm.ap-southeast-1.rds.amazonaws.com"
+      Port: 3306   
+      Username: "root"
+      Password: "rootadmin"
+    restart: always
+    ports:
+      - 8001:8000
